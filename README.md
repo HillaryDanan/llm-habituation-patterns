@@ -5,7 +5,7 @@
 
 ## Overview
 
-This repository contains a systematic investigation into temporal response dynamics in large language models (LLMs). Through four pre-registered studies (N=330 prompts across Claude Sonnet 4.5 and GPT-4), we tested whether LLMs exhibit habituation, sensitization, recovery, and tolerance—temporal dynamics ubiquitous in biological learning systems.
+This repository contains a systematic investigation into temporal response dynamics in large language models (LLMs). Through four studies (N=330 prompts across Claude Sonnet 4.5 and GPT-4), we tested whether LLMs exhibit habituation, sensitization, recovery, and tolerance—temporal dynamics ubiquitous in biological learning systems.
 
 **Key Finding:** LLMs exhibit **response invariance**—statistical stability of output distributions across temporal manipulations—revealing fundamental architectural differences from biological neural networks.
 
