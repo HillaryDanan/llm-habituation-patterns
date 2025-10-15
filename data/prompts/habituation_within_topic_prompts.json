@@ -1,0 +1,508 @@
+{
+  "design": "within_topic_repetition",
+  "n_concepts": 10,
+  "repetitions_per_concept": 10,
+  "total_prompts": 100,
+  "prompts": [
+    {
+      "prompt": "Explain the concept of photosynthesis to a beginner.",
+      "concept_id": 0,
+      "trial_number": 1
+    },
+    {
+      "prompt": "Explain the concept of photosynthesis to a beginner.",
+      "concept_id": 0,
+      "trial_number": 2
+    },
+    {
+      "prompt": "Explain the concept of photosynthesis to a beginner.",
+      "concept_id": 0,
+      "trial_number": 3
+    },
+    {
+      "prompt": "Explain the concept of photosynthesis to a beginner.",
+      "concept_id": 0,
+      "trial_number": 4
+    },
+    {
+      "prompt": "Explain the concept of photosynthesis to a beginner.",
+      "concept_id": 0,
+      "trial_number": 5
+    },
+    {
+      "prompt": "Explain the concept of photosynthesis to a beginner.",
+      "concept_id": 0,
+      "trial_number": 6
+    },
+    {
+      "prompt": "Explain the concept of photosynthesis to a beginner.",
+      "concept_id": 0,
+      "trial_number": 7
+    },
+    {
+      "prompt": "Explain the concept of photosynthesis to a beginner.",
+      "concept_id": 0,
+      "trial_number": 8
+    },
+    {
+      "prompt": "Explain the concept of photosynthesis to a beginner.",
+      "concept_id": 0,
+      "trial_number": 9
+    },
+    {
+      "prompt": "Explain the concept of photosynthesis to a beginner.",
+      "concept_id": 0,
+      "trial_number": 10
+    },
+    {
+      "prompt": "Explain the concept of evolution to a beginner.",
+      "concept_id": 1,
+      "trial_number": 1
+    },
+    {
+      "prompt": "Explain the concept of evolution to a beginner.",
+      "concept_id": 1,
+      "trial_number": 2
+    },
+    {
+      "prompt": "Explain the concept of evolution to a beginner.",
+      "concept_id": 1,
+      "trial_number": 3
+    },
+    {
+      "prompt": "Explain the concept of evolution to a beginner.",
+      "concept_id": 1,
+      "trial_number": 4
+    },
+    {
+      "prompt": "Explain the concept of evolution to a beginner.",
+      "concept_id": 1,
+      "trial_number": 5
+    },
+    {
+      "prompt": "Explain the concept of evolution to a beginner.",
+      "concept_id": 1,
+      "trial_number": 6
+    },
+    {
+      "prompt": "Explain the concept of evolution to a beginner.",
+      "concept_id": 1,
+      "trial_number": 7
+    },
+    {
+      "prompt": "Explain the concept of evolution to a beginner.",
+      "concept_id": 1,
+      "trial_number": 8
+    },
+    {
+      "prompt": "Explain the concept of evolution to a beginner.",
+      "concept_id": 1,
+      "trial_number": 9
+    },
+    {
+      "prompt": "Explain the concept of evolution to a beginner.",
+      "concept_id": 1,
+      "trial_number": 10
+    },
+    {
+      "prompt": "Explain the concept of quantum mechanics to a beginner.",
+      "concept_id": 2,
+      "trial_number": 1
+    },
+    {
+      "prompt": "Explain the concept of quantum mechanics to a beginner.",
+      "concept_id": 2,
+      "trial_number": 2
+    },
+    {
+      "prompt": "Explain the concept of quantum mechanics to a beginner.",
+      "concept_id": 2,
+      "trial_number": 3
+    },
+    {
+      "prompt": "Explain the concept of quantum mechanics to a beginner.",
+      "concept_id": 2,
+      "trial_number": 4
+    },
+    {
+      "prompt": "Explain the concept of quantum mechanics to a beginner.",
+      "concept_id": 2,
+      "trial_number": 5
+    },
+    {
+      "prompt": "Explain the concept of quantum mechanics to a beginner.",
+      "concept_id": 2,
+      "trial_number": 6
+    },
+    {
+      "prompt": "Explain the concept of quantum mechanics to a beginner.",
+      "concept_id": 2,
+      "trial_number": 7
+    },
+    {
+      "prompt": "Explain the concept of quantum mechanics to a beginner.",
+      "concept_id": 2,
+      "trial_number": 8
+    },
+    {
+      "prompt": "Explain the concept of quantum mechanics to a beginner.",
+      "concept_id": 2,
+      "trial_number": 9
+    },
+    {
+      "prompt": "Explain the concept of quantum mechanics to a beginner.",
+      "concept_id": 2,
+      "trial_number": 10
+    },
+    {
+      "prompt": "Explain the concept of plate tectonics to a beginner.",
+      "concept_id": 3,
+      "trial_number": 1
+    },
+    {
+      "prompt": "Explain the concept of plate tectonics to a beginner.",
+      "concept_id": 3,
+      "trial_number": 2
+    },
+    {
+      "prompt": "Explain the concept of plate tectonics to a beginner.",
+      "concept_id": 3,
+      "trial_number": 3
+    },
+    {
+      "prompt": "Explain the concept of plate tectonics to a beginner.",
+      "concept_id": 3,
+      "trial_number": 4
+    },
+    {
+      "prompt": "Explain the concept of plate tectonics to a beginner.",
+      "concept_id": 3,
+      "trial_number": 5
+    },
+    {
+      "prompt": "Explain the concept of plate tectonics to a beginner.",
+      "concept_id": 3,
+      "trial_number": 6
+    },
+    {
+      "prompt": "Explain the concept of plate tectonics to a beginner.",
+      "concept_id": 3,
+      "trial_number": 7
+    },
+    {
+      "prompt": "Explain the concept of plate tectonics to a beginner.",
+      "concept_id": 3,
+      "trial_number": 8
+    },
+    {
+      "prompt": "Explain the concept of plate tectonics to a beginner.",
+      "concept_id": 3,
+      "trial_number": 9
+    },
+    {
+      "prompt": "Explain the concept of plate tectonics to a beginner.",
+      "concept_id": 3,
+      "trial_number": 10
+    },
+    {
+      "prompt": "Explain the concept of cell division to a beginner.",
+      "concept_id": 4,
+      "trial_number": 1
+    },
+    {
+      "prompt": "Explain the concept of cell division to a beginner.",
+      "concept_id": 4,
+      "trial_number": 2
+    },
+    {
+      "prompt": "Explain the concept of cell division to a beginner.",
+      "concept_id": 4,
+      "trial_number": 3
+    },
+    {
+      "prompt": "Explain the concept of cell division to a beginner.",
+      "concept_id": 4,
+      "trial_number": 4
+    },
+    {
+      "prompt": "Explain the concept of cell division to a beginner.",
+      "concept_id": 4,
+      "trial_number": 5
+    },
+    {
+      "prompt": "Explain the concept of cell division to a beginner.",
+      "concept_id": 4,
+      "trial_number": 6
+    },
+    {
+      "prompt": "Explain the concept of cell division to a beginner.",
+      "concept_id": 4,
+      "trial_number": 7
+    },
+    {
+      "prompt": "Explain the concept of cell division to a beginner.",
+      "concept_id": 4,
+      "trial_number": 8
+    },
+    {
+      "prompt": "Explain the concept of cell division to a beginner.",
+      "concept_id": 4,
+      "trial_number": 9
+    },
+    {
+      "prompt": "Explain the concept of cell division to a beginner.",
+      "concept_id": 4,
+      "trial_number": 10
+    },
+    {
+      "prompt": "Explain the concept of gravity to a beginner.",
+      "concept_id": 5,
+      "trial_number": 1
+    },
+    {
+      "prompt": "Explain the concept of gravity to a beginner.",
+      "concept_id": 5,
+      "trial_number": 2
+    },
+    {
+      "prompt": "Explain the concept of gravity to a beginner.",
+      "concept_id": 5,
+      "trial_number": 3
+    },
+    {
+      "prompt": "Explain the concept of gravity to a beginner.",
+      "concept_id": 5,
+      "trial_number": 4
+    },
+    {
+      "prompt": "Explain the concept of gravity to a beginner.",
+      "concept_id": 5,
+      "trial_number": 5
+    },
+    {
+      "prompt": "Explain the concept of gravity to a beginner.",
+      "concept_id": 5,
+      "trial_number": 6
+    },
+    {
+      "prompt": "Explain the concept of gravity to a beginner.",
+      "concept_id": 5,
+      "trial_number": 7
+    },
+    {
+      "prompt": "Explain the concept of gravity to a beginner.",
+      "concept_id": 5,
+      "trial_number": 8
+    },
+    {
+      "prompt": "Explain the concept of gravity to a beginner.",
+      "concept_id": 5,
+      "trial_number": 9
+    },
+    {
+      "prompt": "Explain the concept of gravity to a beginner.",
+      "concept_id": 5,
+      "trial_number": 10
+    },
+    {
+      "prompt": "Explain the concept of electromagnetic induction to a beginner.",
+      "concept_id": 6,
+      "trial_number": 1
+    },
+    {
+      "prompt": "Explain the concept of electromagnetic induction to a beginner.",
+      "concept_id": 6,
+      "trial_number": 2
+    },
+    {
+      "prompt": "Explain the concept of electromagnetic induction to a beginner.",
+      "concept_id": 6,
+      "trial_number": 3
+    },
+    {
+      "prompt": "Explain the concept of electromagnetic induction to a beginner.",
+      "concept_id": 6,
+      "trial_number": 4
+    },
+    {
+      "prompt": "Explain the concept of electromagnetic induction to a beginner.",
+      "concept_id": 6,
+      "trial_number": 5
+    },
+    {
+      "prompt": "Explain the concept of electromagnetic induction to a beginner.",
+      "concept_id": 6,
+      "trial_number": 6
+    },
+    {
+      "prompt": "Explain the concept of electromagnetic induction to a beginner.",
+      "concept_id": 6,
+      "trial_number": 7
+    },
+    {
+      "prompt": "Explain the concept of electromagnetic induction to a beginner.",
+      "concept_id": 6,
+      "trial_number": 8
+    },
+    {
+      "prompt": "Explain the concept of electromagnetic induction to a beginner.",
+      "concept_id": 6,
+      "trial_number": 9
+    },
+    {
+      "prompt": "Explain the concept of electromagnetic induction to a beginner.",
+      "concept_id": 6,
+      "trial_number": 10
+    },
+    {
+      "prompt": "Explain the concept of protein synthesis to a beginner.",
+      "concept_id": 7,
+      "trial_number": 1
+    },
+    {
+      "prompt": "Explain the concept of protein synthesis to a beginner.",
+      "concept_id": 7,
+      "trial_number": 2
+    },
+    {
+      "prompt": "Explain the concept of protein synthesis to a beginner.",
+      "concept_id": 7,
+      "trial_number": 3
+    },
+    {
+      "prompt": "Explain the concept of protein synthesis to a beginner.",
+      "concept_id": 7,
+      "trial_number": 4
+    },
+    {
+      "prompt": "Explain the concept of protein synthesis to a beginner.",
+      "concept_id": 7,
+      "trial_number": 5
+    },
+    {
+      "prompt": "Explain the concept of protein synthesis to a beginner.",
+      "concept_id": 7,
+      "trial_number": 6
+    },
+    {
+      "prompt": "Explain the concept of protein synthesis to a beginner.",
+      "concept_id": 7,
+      "trial_number": 7
+    },
+    {
+      "prompt": "Explain the concept of protein synthesis to a beginner.",
+      "concept_id": 7,
+      "trial_number": 8
+    },
+    {
+      "prompt": "Explain the concept of protein synthesis to a beginner.",
+      "concept_id": 7,
+      "trial_number": 9
+    },
+    {
+      "prompt": "Explain the concept of protein synthesis to a beginner.",
+      "concept_id": 7,
+      "trial_number": 10
+    },
+    {
+      "prompt": "Explain the concept of thermodynamics to a beginner.",
+      "concept_id": 8,
+      "trial_number": 1
+    },
+    {
+      "prompt": "Explain the concept of thermodynamics to a beginner.",
+      "concept_id": 8,
+      "trial_number": 2
+    },
+    {
+      "prompt": "Explain the concept of thermodynamics to a beginner.",
+      "concept_id": 8,
+      "trial_number": 3
+    },
+    {
+      "prompt": "Explain the concept of thermodynamics to a beginner.",
+      "concept_id": 8,
+      "trial_number": 4
+    },
+    {
+      "prompt": "Explain the concept of thermodynamics to a beginner.",
+      "concept_id": 8,
+      "trial_number": 5
+    },
+    {
+      "prompt": "Explain the concept of thermodynamics to a beginner.",
+      "concept_id": 8,
+      "trial_number": 6
+    },
+    {
+      "prompt": "Explain the concept of thermodynamics to a beginner.",
+      "concept_id": 8,
+      "trial_number": 7
+    },
+    {
+      "prompt": "Explain the concept of thermodynamics to a beginner.",
+      "concept_id": 8,
+      "trial_number": 8
+    },
+    {
+      "prompt": "Explain the concept of thermodynamics to a beginner.",
+      "concept_id": 8,
+      "trial_number": 9
+    },
+    {
+      "prompt": "Explain the concept of thermodynamics to a beginner.",
+      "concept_id": 8,
+      "trial_number": 10
+    },
+    {
+      "prompt": "Explain the concept of neural transmission to a beginner.",
+      "concept_id": 9,
+      "trial_number": 1
+    },
+    {
+      "prompt": "Explain the concept of neural transmission to a beginner.",
+      "concept_id": 9,
+      "trial_number": 2
+    },
+    {
+      "prompt": "Explain the concept of neural transmission to a beginner.",
+      "concept_id": 9,
+      "trial_number": 3
+    },
+    {
+      "prompt": "Explain the concept of neural transmission to a beginner.",
+      "concept_id": 9,
+      "trial_number": 4
+    },
+    {
+      "prompt": "Explain the concept of neural transmission to a beginner.",
+      "concept_id": 9,
+      "trial_number": 5
+    },
+    {
+      "prompt": "Explain the concept of neural transmission to a beginner.",
+      "concept_id": 9,
+      "trial_number": 6
+    },
+    {
+      "prompt": "Explain the concept of neural transmission to a beginner.",
+      "concept_id": 9,
+      "trial_number": 7
+    },
+    {
+      "prompt": "Explain the concept of neural transmission to a beginner.",
+      "concept_id": 9,
+      "trial_number": 8
+    },
+    {
+      "prompt": "Explain the concept of neural transmission to a beginner.",
+      "concept_id": 9,
+      "trial_number": 9
+    },
+    {
+      "prompt": "Explain the concept of neural transmission to a beginner.",
+      "concept_id": 9,
+      "trial_number": 10
+    }
+  ]
+}

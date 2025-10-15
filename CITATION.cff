@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: "Danan"
+    given-names: "Hillary"
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+title: "LLM Habituation Patterns: Computational Approaches to Stimulation-Seeking Behaviors"
+version: 0.1.0
+date-released: 2025-10-13
+url: "https://github.com/HillaryDanan/llm-habituation-patterns"
+repository-code: "https://github.com/HillaryDanan/llm-habituation-patterns"
+keywords:
+  - large language models
+  - habituation
+  - computational psychology
+  - boredom
+  - stimulation-seeking
+  - reinforcement learning
+  - AI behavior
+license: MIT
+abstract: >
+  A systematic investigation into whether large language models exhibit
+  behavioral patterns functionally analogous to habituation and 
+  stimulation-seeking behaviors observed in biological systems. This work
+  measures objective, testable patterns while maintaining scientific honesty
+  about limitations of anthropomorphic comparisons.
