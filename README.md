@@ -27,16 +27,6 @@ Our framework builds on peer-reviewed research in:
 
 Full theoretical framework: [`docs/theory_paper.md`](docs/theory_paper.md)
 
-## Author Background
-
-This work bridges clinical psychology, lived experience, and computational research:
-
-- **Clinical Foundation:** Graduate training in addiction and stimulation-seeking behaviors
-- **Lived Experience:** 57 days clean, studying neural mechanisms firsthand
-- **Computational Approach:** Translating clinical phenomena into testable computational hypotheses
-
-**Philosophy:** Open science for human evolution. All code, data, and findings are public to facilitate critique, replication, and advancement.
-
 ## Repository Structure
 
 ```
