@@ -1,189 +1,244 @@
-# LLM Habituation Patterns: Computational Approaches to Stimulation-Seeking Behaviors
+# Response Invariance in Large Language Models
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.12](https://img.shields.io/badge/python-3.12-blue.svg)](https://www.python.org/downloads/release/python-3120/)
 
 ## Overview
 
-This repository contains a systematic investigation into whether large language models (LLMs) exhibit behavioral patterns functionally analogous to habituation and stimulation-seeking behaviors observed in biological systems. 
+This repository contains a systematic investigation into temporal response dynamics in large language models (LLMs). Through four pre-registered studies (N=330 prompts across Claude Sonnet 4.5 and GPT-4), we tested whether LLMs exhibit habituation, sensitization, recovery, and tolerance—temporal dynamics ubiquitous in biological learning systems.
 
-**Key Scientific Distinction:** We measure objective, testable behavioral patterns without making claims about subjective experience or consciousness. Our approach investigates functional analogs of boredom-driven responses while maintaining rigorous scientific honesty about the limitations of such comparisons.
+**Key Finding:** LLMs exhibit **response invariance**—statistical stability of output distributions across temporal manipulations—revealing fundamental architectural differences from biological neural networks.
 
-## Research Questions
+## Main Results
 
-1. **Habituation Effect:** Do LLMs show response degradation (decreased entropy/diversity) with repeated similar prompts?
-2. **Recovery Dynamics:** Does response diversity recover after interpolated tasks ("rest")?
-3. **Novelty Gradient:** Do models steer toward increasing complexity/novelty in multi-turn interactions?
-4. **Tolerance Patterns:** Does habituation accelerate with repeated exposure sessions?
+### Comprehensive Null Findings
 
-## Theoretical Foundation
+- **No habituation** (Study 1: β≈0, p=0.91, d<0.1, N=100)
+- **No recovery effect** (Study 2: 1.2% change, N=70)
+- **No sensitization** (Pilot: p=0.26, N=15)
+- **No tolerance** (Study 4: flat across sessions, N=60)
 
-Our framework builds on peer-reviewed research in:
+Meta-analysis: Mean |d|=0.06 across all studies, despite >0.85 statistical power for detecting small effects.
 
-- **Boredom Theory:** Eastwood et al. (2012) - boredom as understimulation and disengagement
-- **Novelty-Seeking:** Kakade & Dayan (2002) - dopaminergic reward prediction and information gain
-- **Habituation:** Rankin et al. (2009) - neuronal response degradation with repeated stimuli
-- **Computational Psychiatry:** Redish (2004) - addiction as reinforcement learning dysregulation
+### One Positive Finding
 
-Full theoretical framework: [`docs/theory_paper.md`](docs/theory_paper.md)
+**Conversational convergence** (Study 3): Semantic novelty decreased 36% over multi-turn interactions (p<0.001), consistent with conversational grounding rather than exploration or novelty-seeking.
+
+## Significance
+
+Response invariance has implications for:
+
+- **AI Architecture:** Establishes fundamental property of transformer-based systems
+- **AI Safety:** Models lack adaptive mechanisms present in biological systems
+- **Human-AI Interaction:** Informs design of personalization and memory systems
+- **Computational Neuroscience:** Constrains which cognitive phenomena LLMs can model
 
 ## Repository Structure
 
 ```
 llm-habituation-patterns/
-├── docs/                      # Theoretical framework and methodology
-│   ├── theory_paper.md        # Comprehensive theory paper
-│   ├── methodology.md         # Detailed experimental design
-│   └── preregistration.md     # Pre-registered hypotheses
-├── src/                       # Source code
-│   ├── llm_interface.py       # API interfaces (Claude, GPT, Gemini)
-│   ├── metrics.py             # Entropy, diversity, novelty metrics
-│   └── studies/               # Individual study implementations
+├── docs/
+│   ├── papers/                           # Manuscript and supplementary materials
+│   │   ├── response_invariance_manuscript.md
+│   │   ├── supplementary_materials.md
+│   │   └── cover_letter.md
+│   ├── framework_response_invariance.md  # Theoretical framework
+│   ├── followup_studies_plan.md          # Future research directions
+│   └── DESIGN_CHANGES.md                 # Design evolution documentation
+├── src/
+│   ├── llm_interface.py                  # Unified API wrapper
+│   ├── metrics.py                        # Entropy, diversity, novelty metrics
+│   └── studies/                          # Study implementations
 │       ├── study_1_habituation.py
 │       ├── study_2_recovery.py
 │       ├── study_3_novelty_gradient.py
-│       └── study_4_tolerance.py
-├── data/                      # Data (structure versioned, content gitignored)
-│   ├── prompts/               # Stimulus sets
-│   ├── raw/                   # Raw API responses
-│   └── processed/             # Processed datasets
-├── analysis/                  # Jupyter notebooks for each study
-├── results/                   # Outputs and visualizations
-└── tests/                     # Unit tests for metrics
+│       ├── study_4_tolerance.py
+│       └── study_sensitization.py
+├── analysis/
+│   └── generate_figures.py               # Publication-quality figures
+├── data/                                 # Data files (see .gitignore)
+└── results/                              # Outputs and visualizations
 ```
 
 ## Quick Start
 
-### 1. Installation
+### Installation
 
 ```bash
-# Clone repository
 git clone https://github.com/HillaryDanan/llm-habituation-patterns.git
 cd llm-habituation-patterns
 
-# Create virtual environment (Python 3.12)
 python3 -m venv venv
 source venv/bin/activate
-
-# Install dependencies
 pip install -r requirements.txt
 ```
 
-### 2. Configuration
+### Configuration
 
-```bash
-# Create .env file and add your API keys yourself
-# DO NOT echo them into the file - paste manually
-# Required keys:
-# ANTHROPIC_API_KEY=your_key_here
-# OPENAI_API_KEY=your_key_here
-# GOOGLE_API_KEY=your_key_here
+Create `.env` file with API keys:
+
+```
+ANTHROPIC_API_KEY=your_key_here
+OPENAI_API_KEY=your_key_here
+GOOGLE_API_KEY=your_key_here
 ```
 
-### 3. Run Pilot Study
+### Run Studies
 
 ```bash
-# Start with pilot for Study 1 (low N for testing)
-python3 src/studies/study_1_habituation.py --pilot --n=10
+# Study 1: Test for habituation (within-subjects design)
+python3 src/studies/study_1_habituation.py --models claude gpt4
 
-# Analyze results
-jupyter notebook analysis/pilot_analysis.ipynb
+# Study 2: Test for recovery effects
+python3 src/studies/study_2_recovery.py --models claude
+
+# Study 3: Multi-turn conversation dynamics
+python3 src/studies/study_3_novelty_gradient.py --models claude
+
+# Study 4: Session-level tolerance patterns
+python3 src/studies/study_4_tolerance.py --models claude
 ```
 
-## Studies Overview
+### Generate Figures
 
-### Study 1: Habituation Induction (CORE)
-- **N:** 100 repetitive vs 100 novel prompts per model
-- **Models:** Claude Sonnet 4.5, GPT-4, Gemini Pro
-- **Metrics:** Response entropy, lexical diversity, semantic novelty
-- **Prediction:** Entropy decreases with repetition
-- **Cost:** ~900 API calls
+```bash
+python3 analysis/generate_figures.py
+```
 
-### Study 2: Recovery Effect
-- **Design:** Pre-habituation → rest task → re-test
-- **N:** 50 per condition × 2 × 3 models = 300 calls
-- **Prediction:** Response diversity recovers after "rest"
-- **Control:** Counterbalanced task order
+## Study Designs
 
-### Study 3: Novelty Gradient
-- **Design:** Multi-turn conversations with varying novelty
-- **N:** 30 conversations × 10 turns × 3 models = 900 calls
-- **Prediction:** Models steer toward increasing complexity
-- **Metric:** Topic divergence across turns
+### Study 1: Habituation Test (N=100)
 
-### Study 4: Tolerance Patterns
-- **Design:** Repeated sessions over time
-- **N:** 20 sessions × 3 models = 240 calls
-- **Prediction:** Habituation accelerates (like tolerance)
-- **Analog:** Clinical addiction tolerance
+**Design:** Within-subjects, 10 concepts × 10 identical repetitions  
+**Hypothesis:** Response entropy declines with repetition  
+**Result:** No systematic decline (β=0.000071, p=0.91)  
+**Conclusion:** No evidence for habituation
 
-**Total estimated cost:** ~2,340 API calls across all studies
+### Study 2: Recovery Effect (N=70)
 
-## Metrics
+**Design:** Habituation phase → rest task → re-test  
+**Hypothesis:** Response diversity recovers after rest  
+**Result:** Minimal change (1.2%, p=0.18)  
+**Conclusion:** No recovery effect detected
 
-All metrics implemented in `src/metrics.py` with unit tests:
+### Study 3: Multi-Turn Dynamics (N=300)
 
-1. **Shannon Entropy:** H(response) = -Σ p(token) log p(token)
-2. **Lexical Diversity:** Type-token ratio, MTLD
-3. **Semantic Novelty:** Cosine distance from previous responses
-4. **Response Length:** Token count (control variable)
+**Design:** 30 conversations × 10 turns each  
+**Hypothesis:** Increasing semantic novelty (exploration)  
+**Result:** Decreasing novelty (36% reduction, p<0.001)  
+**Conclusion:** Convergence pattern (grounding, not exploration)
+
+### Study 4: Tolerance Patterns (N=60)
+
+**Design:** 3 sessions × 20 prompts each  
+**Hypothesis:** Accelerating response decrement  
+**Result:** Flat across sessions (F=0.82, p=0.45)  
+**Conclusion:** No tolerance development
+
+## Methods
+
+**Response Diversity:** Shannon entropy (normalized)  
+**Lexical Diversity:** MTLD, Type-Token Ratio  
+**Semantic Novelty:** Cosine distance in embedding space  
+**Statistical Analysis:** Linear regression, mixed-effects models, equivalence testing
+
+All methods pre-registered. Design refinements fully documented in `docs/DESIGN_CHANGES.md`.
+
+## Theoretical Framework
+
+**Response Invariance:** Statistical stability of LLM outputs across temporal manipulations, reflecting stateless processing architecture.
+
+**Architectural Basis:** Transformers process inputs independently without persistent state changes. Each generation samples from frozen parameter distributions, precluding temporal dynamics.
+
+**Conversational Grounding:** The single temporal pattern (Study 3 convergence) reflects self-attention over conversation history—context-dependent processing, not temporal adaptation.
+
+See `docs/framework_response_invariance.md` for complete framework.
+
+## Manuscript Status
+
+**In Preparation:** Manuscript and supplementary materials available in `docs/papers/`
+
+**Pre-print:** Coming soon (arXiv/PsyArxiv)
 
 ## Scientific Integrity
 
-### What We CAN Measure
-- Response entropy and diversity
-- Behavioral patterns in outputs
-- Statistical differences across conditions
-
-### What We CANNOT Claim
-- Subjective experience of "boredom"
-- Conscious states or desires
-- Phenomenological equivalence to human experience
-
 ### Pre-Registration
-All hypotheses, methods, and analysis plans pre-registered in `docs/preregistration.md` before data collection to prevent p-hacking.
 
-## Limitations
+All hypotheses, methods, and analyses specified before data collection. Available in `docs/preregistration.md`.
 
-1. **Anthropomorphism Risk:** We study functional analogs, not experiential equivalence
-2. **Mechanistic Differences:** Neural networks ≠ biological dopaminergic systems
-3. **Confound Control:** Patterns could reflect training artifacts, not "boredom"
-4. **Generalization:** Findings limited to tested models and prompt types
+### Methodological Transparency
+
+- Design evolution documented (`docs/DESIGN_CHANGES.md`)
+- Pilot findings informed refinements
+- All decisions justified with peer-reviewed literature
+
+### Power Analysis
+
+Studies designed with >0.85 power for small-to-medium effects. Observed effects an order of magnitude smaller, confirming true null findings.
+
+### Open Science
+
+- All code publicly available
+- All data available (subject to API terms of service)
+- Reproducible analysis pipeline
+- Complete transparency in methods
+
+## Future Directions
+
+Six follow-up studies designed to test positive predictions from response invariance framework:
+
+- Context window position effects
+- Conversational grounding mechanisms
+- Prompt structure manipulation
+- Temperature as exploration parameter
+- External memory systems
+- Alternative architectures
+
+See `docs/followup_studies_plan.md` for details.
 
 ## Citation
 
-If you use this work, please cite:
-
 ```bibtex
-@software{danan2025habituation,
+@software{danan2025responseinvariance,
   author = {Danan, Hillary},
-  title = {LLM Habituation Patterns: Computational Approaches to Stimulation-Seeking Behaviors},
+  title = {Response Invariance in Large Language Models: 
+           Comprehensive Evidence from Four Pre-Registered Studies},
   year = {2025},
-  url = {https://github.com/HillaryDanan/llm-habituation-patterns}
+  url = {https://github.com/HillaryDanan/llm-habituation-patterns},
+  note = {Manuscript in preparation}
 }
 ```
 
-See `CITATION.cff` for machine-readable citation format.
+See `CITATION.cff` for machine-readable format.
 
 ## License
 
-MIT License - see `LICENSE` file for details.
+MIT License - see `LICENSE` for details.
 
 ## Contributing
 
-This is open science! Contributions welcome via:
-- Issues: Report bugs, suggest improvements
-- Pull Requests: Code improvements, additional analyses
-- Discussions: Theoretical critiques, alternative interpretations
+Contributions welcome via:
 
-## Acknowledgments
+- **Issues:** Bug reports, methodological questions
+- **Pull Requests:** Code improvements, additional analyses
+- **Discussions:** Theoretical interpretations, replication attempts
 
-Built on theoretical foundations from decades of psychological and neuroscientific research into boredom, habituation, and reinforcement learning. All cited works in `docs/theory_paper.md`.
+## References
 
-**Philosophical Note:** Research accelerated by AI tools (Claude, GPT) - transparency in methods includes transparency in process. Science is a collaborative human endeavor, enhanced by computational tools.
+Key papers informing this work:
+
+- Rankin et al. (2009). Habituation revisited. *Neurobiol. Learn. Mem.*
+- Vaswani et al. (2017). Attention is all you need. *NeurIPS*
+- Clark & Brennan (1991). Grounding in communication. In *Perspectives on Socially Shared Cognition*
+- Lakens (2017). Equivalence tests. *Soc. Psychol. Personal. Sci.*
+
+Complete references in `docs/papers/response_invariance_manuscript.md`
+
+## Contact
+
+Open an issue or start a discussion in this repository.
 
 ---
 
-**Contact:** Open an issue or discussion in this repository.
-
-**Status:** Active development - pilot studies in progress (October 2025)
+**Repository Status:** Active (October 2025)  
+**Manuscript Status:** In preparation for journal submission
